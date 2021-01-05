@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+	<PropertyGroup>
+		<DebugType>none</DebugType>
+		<OutputPath>bin\</OutputPath>
+	</PropertyGroup>
+	<ItemGroup><Reference Include="System"/></ItemGroup>
+	<ItemGroup><Compile Include="src\**" /></ItemGroup>
+	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
