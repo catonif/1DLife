@@ -95,8 +95,6 @@ class Program {
 
 			if (!grandTour) Console.ReadKey(true);
 
-			//Console.WindowWidth = habitatSize - 1;
-
 			if (grandTour) {
 
 				for (int i = 0; i < (1 << (values.Length + 4)); i++) {
@@ -117,19 +115,16 @@ class Program {
 					}
 				}
 
-				goto Continue;
-
-			}
-			Fill();
-			Randomize();
-			Render();
-
-			while (Console.ReadKey(true).KeyChar != 'q') {
-				GenerateNeighboursCount();
+			} else {
+				Fill();
+				Randomize();
 				Render();
-			}
 
-			Continue:
+				while (Console.ReadKey(true).KeyChar != 'q') {
+					GenerateNeighboursCount();
+					Render();
+				}
+			}
 
 			args = new string[] { };
 			
